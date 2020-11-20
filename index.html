@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Simon</title>
+        <link rel="stylesheet" href="style.css" />
+
+        <audio id="click1" preload="auto"><source src="./assets/clicktone/click1.mp3" alt=""></audio>
+        <audio id="click2" preload="auto"><source src="./assets/clicktone/click2.mp3" alt=""></audio>
+        <audio id="click3" preload="auto"><source src="./assets/clicktone/click3.mp3" alt=""></audio>
+        <audio id="click4" preload="auto"><source src="./assets/clicktone/click4.mp3" alt=""></audio>
+
+        <audio id="gameover"preload="auto"><source src="./assets/status/wrong.mp3"></audio>
+        <audio id="roundover"preload="auto"><source src="./assets/status/roundup.mp3"></audio>
+
+        <img id='gameend' src='images/80.png'class="centered">
+    </head>
+
+    <body>
+        
+<header>
+<div class= "header">
+    <img src= 'images/simon.png' alt="logo" style="width: 50%">
+</div>
+    </header>
+
+     <button class="button button1" onCLick="refreshPage()">New Game</button>
+
+
+
+<div class= "text">
+  <textarea name="message" rows="35" cols="20" wrap="hard">
+1.
+Press the START button. Simon will give the first signal. Repeat the signal by pressing the same color panels.
+
+2.        
+Simon will duplicate the first signal and add one. Repeat these two signals by pressing the same color panels, in order.
+ 
+3.       
+Simon will duplicate these first two signals and add one.
+ 
+4.       
+Continue playing as long as you can repeat each sequence of signals correctly. 
+
+5.
+If you fail to repeat a sequence exactly, or if you take more than 5 seconds to repeat a signal, Simon responds with a "RAZZ" sound. This means you've lost, and the sequence of signals ends.
+    </textarea>
+</div>
+
+
+        <div class="matchwrapper">
+
+          <div>
+                <div 
+                onclick="panelClicked(event.currentTarget)"
+                class="panel top-left-panel"></div>
+            
+                <div 
+                onclick="panelClicked(event.currentTarget)"
+                class="panel top-right-panel"></div>
+               
+            </div>
+            <div>
+                <div
+                onclick="panelClicked(event.currentTarget)"
+                class="panel bottom-left-panel"></div>
+                
+                <div
+                onclick="panelClicked(event.currentTarget)"
+                class="panel bottom-right-panel"></div>
+               
+            </div>
+            <div class="centerclip"></div>  <div class="center">
+               </div> <div class="centerfill">
+   
+               </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
